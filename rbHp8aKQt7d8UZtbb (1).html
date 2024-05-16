@@ -1,0 +1,162 @@
+<html><head><base href=""></head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('twilight.jpg');
+  }
+
+  .mountains {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: url('ww.jpg');
+    background-size: cover;
+    background-position: bottom;
+    z-index: 1;
+  }
+
+  
+
+  @keyframes stars {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+  .login-panel {
+    background-color: rgba(65, 45, 92, 0.562);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    z-index: 3;
+    color: #fff;
+    position: relative;
+  }
+
+  .login-panel h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 2em;
+    color: #e0c5ff;
+    text-shadow: 0 0 10px rgba(224, 197, 255, 0.5);
+  }
+
+  .login-panel input[type="text"],
+  .login-panel input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #7e57c2;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .login-panel input[type="text"]:focus,
+  .login-panel input[type="password"]:focus {
+    outline: none;
+    border-color: #e0c5ff;
+    box-shadow: 0 0 10px rgba(224, 197, 255, 0.3);
+  }
+
+  .login-panel .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .login-panel .remember-me input[type="checkbox"] {
+    margin-right: 8px;
+  }
+
+  .login-panel .forgot-password {
+    text-align: right;
+    margin-bottom: 16px;
+  }
+
+  .login-panel .forgot-password a {
+    color: #e0c5ff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .login-panel .forgot-password a:hover {
+    color: #fff;
+  }
+
+  .login-panel button {
+    background-color: #9370db;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .login-panel button:hover {
+    background-color: #7e57c2;
+  }
+
+  .login-panel .register-link {
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .login-panel .register-link a {
+    color: #e0c5ff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .login-panel .register-link a:hover {
+    color: #fff;
+  }
+</style>
+
+
+<div class="mountains"></div>
+<div class="login-panel">
+  <h2>Login</h2>
+  <form>
+    <input type="text" placeholder="Username" required>
+    <input type="password" placeholder="Password" required>
+    <div class="remember-me">
+      <input type="checkbox" id="remember-me">
+      <label for="remember-me">Remember me</label>
+    </div>
+    <div class="forgot-password">
+      <a href="#">Forgot Password?</a>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <div class="register-link">
+    <a href="https://websim.ai/register">Register</a>
+  </div>
+</div>
+</html>
